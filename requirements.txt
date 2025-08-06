@@ -1,0 +1,43 @@
+# AnonymityEngine - Complete Requirements
+# All dependencies needed for running the application
+
+# Core HTTP requests with SOCKS proxy support
+requests[socks]>=2.31.0
+
+# SOCKS proxy support (included with requests[socks] but explicit for clarity)
+PySocks>=1.7.1
+
+# Enhanced urllib3 for better connection handling
+urllib3>=2.0.0
+
+# Certificate management
+certifi>=2023.7.22
+
+# JSON handling (built-in but ensuring compatibility)
+# json - built-in Python module
+
+# System process management (built-in but listing for documentation)
+# subprocess - built-in Python module
+# os - built-in Python module
+# sys - built-in Python module
+# signal - built-in Python module
+# time - built-in Python module
+# pathlib - built-in Python module (Python 3.4+)
+
+# Logging enhancements (optional but recommended)
+colorlog>=6.7.0
+
+# Configuration file handling
+pyyaml>=6.0.1
+
+# Enhanced argument parsing (if adding CLI features)
+click>=8.1.7
+
+# Type hints support for older Python versions
+typing-extensions>=4.7.1
+
+# Data validation
+pydantic>=2.4.0
+
+# Better error handling and stack traces
+rich>=13.5.2
