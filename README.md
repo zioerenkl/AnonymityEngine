@@ -379,7 +379,7 @@ MIT License - See [LICENSE](LICENSE) file for complete details.
 ### 📌 Quick Links
 
 - **🏠 Homepage**: https://github.com/zioerenkl/AnonymityEngine
-- **📚 Documentation**: [Wiki](https://github.com/zioerenkl/AnonymityEngine/wiki)
+- **📚 Documentation**: [Wiki]([https://github.com/zioerenkl/AnonymityEngine/wiki](https://github.com/zioerenkl/AnonymityEngine/wiki/Architecture-Overview⭐))
 - **🐛 Issues**: [Bug Reports](https://github.com/zioerenkl/AnonymityEngine/issues)
 - **💬 Discussions**: [Community](https://github.com/zioerenkl/AnonymityEngine/discussions)
 - **🔒 Security**: [Security Policy](https://github.com/zioerenkl/AnonymityEngine/security)
