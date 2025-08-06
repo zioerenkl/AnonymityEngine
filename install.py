@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Secure Installer for AnonymityEngine
 Author: zioerenkl | Enhanced by Claude
@@ -85,18 +87,56 @@ class SecureInstaller:
         print("🐍 Installing Python dependencies...")
         
         try:
-            # Install requests with socks support
+            # Try method 1: Regular pip install
             result = subprocess.run([
                 sys.executable, '-m', 'pip', 'install', 
                 'requests[socks]', '--upgrade'
             ], capture_output=True, text=True)
             
-            if result.returncode != 0:
-                print(f"❌ Failed to install Python dependencies: {result.stderr}")
+            if result.returncode == 0:
+                print("✅ Python dependencies installed")
+                return True
+            
+            # Check if it's externally-managed-environment error (Kali Linux, etc.)
+            if "externally-managed-environment" in result.stderr.lower():
+                print("⚠️  Detected externally-managed Python environment (Kali Linux)")
+                print("   Trying alternative installation methods...")
+                
+                # Method 2: Try with --break-system-packages (risky but works)
+                print("   Attempting installation with --break-system-packages...")
+                result2 = subprocess.run([
+                    sys.executable, '-m', 'pip', 'install', 
+                    'requests[socks]', '--upgrade', '--break-system-packages'
+                ], capture_output=True, text=True)
+                
+                if result2.returncode == 0:
+                    print("✅ Python dependencies installed (with --break-system-packages)")
+                    return True
+                
+                # Method 3: Try system package manager
+                print("   Trying system package manager (apt)...")
+                try:
+                    subprocess.run(['apt-get', 'install', '-y', 'python3-requests'], 
+                                  check=True, capture_output=True)
+                    subprocess.run(['apt-get', 'install', '-y', 'python3-socks'], 
+                                  check=True, capture_output=True)
+                    print("✅ Python dependencies installed via apt")
+                    return True
+                except subprocess.CalledProcessError:
+                    pass
+                
+                # Method 4: Suggest pipx
+                print("❌ Could not install Python dependencies")
+                print("   Manual installation required:")
+                print("   Option 1: sudo apt install python3-requests python3-socks")
+                print("   Option 2: python3 -m pip install requests[socks] --break-system-packages")
+                print("   Option 3: Use pipx (recommended for Kali):")
+                print("           sudo apt install pipx")
+                print("           pipx install requests[socks]")
                 return False
             
-            print("✅ Python dependencies installed")
-            return True
+            print(f"❌ Failed to install Python dependencies: {result.stderr}")
+            return False
             
         except Exception as e:
             print(f"❌ Error installing Python dependencies: {e}")
