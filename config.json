@@ -1,0 +1,38 @@
+{
+  "tor_config": {
+    "socks_port": 9050,
+    "control_port": 9051,
+    "timeout": 30,
+    "retry_attempts": 3,
+    "min_interval": 10,
+    "max_interval": 3600,
+    "tor_service_name": "tor"
+  },
+  "ip_check_services": [
+    "http://checkip.amazonaws.com",
+    "http://ipinfo.io/ip",
+    "http://icanhazip.com",
+    "http://httpbin.org/ip",
+    "http://ipecho.net/plain"
+  ],
+  "logging": {
+    "level": "INFO",
+    "file": "/tmp/tor_ip_changer.log",
+    "max_size_mb": 10,
+    "backup_count": 3
+  },
+  "security": {
+    "validate_ssl": true,
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+    "max_log_entries": 1000,
+    "clear_logs_on_exit": false
+  },
+  "advanced": {
+    "circuit_build_timeout": 60,
+    "max_circuit_retries": 3,
+    "enforce_new_circuit": true,
+    "bridge_mode": false,
+    "exit_nodes": [],
+    "exclude_exit_nodes": []
+  }
+}
