@@ -3,6 +3,23 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
 [![Platform: Linux](https://img.shields.io/badge/platform-linux-green.svg)](https://www.linux.org/)
+[![Build: Passing](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/)
+[![Issues](https://img.shields.io/github/issues/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine/pulls)
+[![Stars](https://img.shields.io/github/stars/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine/stargazers)
+[![Forks](https://img.shields.io/github/forks/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine/network)
+[![Last Commit](https://img.shields.io/github/last-commit/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine/commits)
+[![Contributors](https://img.shields.io/github/contributors/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine/graphs/contributors)
+[![Repo Size](https://img.shields.io/github/repo-size/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine)
+[![Top Language](https://img.shields.io/github/languages/top/zioerenkl/AnonymityEngine.svg)](https://github.com/zioerenkl/AnonymityEngine)
+[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Downloads](https://img.shields.io/github/downloads/zioerenkl/AnonymityEngine/total.svg)](https://github.com/zioerenkl/AnonymityEngine/releases)
+[![Security](https://img.shields.io/badge/security-scanned-brightgreen.svg)](https://github.com/zioerenkl/AnonymityEngine/security)
+[![Made with Python](https://img.shields.io/badge/made%20with-python-blue.svg)](https://www.python.org/)
+[![Open Issues](https://img.shields.io/github/issues-raw/zioerenkl/AnonymityEngine)](https://github.com/zioerenkl/AnonymityEngine/issues)
+[![Chat](https://img.shields.io/discord/1000000000000000000?label=chat)](https://discord.gg/)
+[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/zioerenkl/AnonymityEngine)
+
 
 An advanced, secure, and professional-grade tool for automated IP rotation using the Tor network on Linux systems. Built for penetration testing, privacy research, and educational purposes with enterprise-level reliability.
 
